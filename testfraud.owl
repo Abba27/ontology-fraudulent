@@ -1,0 +1,214 @@
+@prefix : <http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4> .
+
+<http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Banking_fraud
+:Banking_fraud rdf:type owl:Class ;
+               rdfs:subClassOf :Financial_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Cryptocurrency_fraud
+:Cryptocurrency_fraud rdf:type owl:Class ;
+                      rdfs:subClassOf :Financial_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Dealer_Fraud
+:Dealer_Fraud rdf:type owl:Class ;
+              rdfs:subClassOf :Cryptocurrency_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Financial_fraud
+:Financial_fraud rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Identity_theft
+:Identity_theft rdf:type owl:Class ;
+                rdfs:subClassOf :Financial_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Investment_fraud
+:Investment_fraud rdf:type owl:Class ;
+                  rdfs:subClassOf :Financial_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Tax_fraud
+:Tax_fraud rdf:type owl:Class ;
+           rdfs:subClassOf :Financial_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Traditional_Theft
+:Traditional_Theft rdf:type owl:Class ;
+                   rdfs:subClassOf :Cryptocurrency_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Transaction_fraud
+:Transaction_fraud rdf:type owl:Class ;
+                   rdfs:subClassOf :Financial_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#Unscrupulous_Promotors
+:Unscrupulous_Promotors rdf:type owl:Class ;
+                        rdfs:subClassOf :Cryptocurrency_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#account_statement_fraud
+:account_statement_fraud rdf:type owl:Class ;
+                         rdfs:subClassOf :Banking_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#atm_machine_fraud
+:atm_machine_fraud rdf:type owl:Class ;
+                   rdfs:subClassOf :Banking_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#bitcoin_fraud
+:bitcoin_fraud rdf:type owl:Class ;
+               rdfs:subClassOf :Cryptocurrency_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#credit_card_fraud
+:credit_card_fraud rdf:type owl:Class ;
+                   rdfs:subClassOf :Banking_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#debit_card_fraud
+:debit_card_fraud rdf:type owl:Class ;
+                  rdfs:subClassOf :Banking_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#email_fraud
+:email_fraud rdf:type owl:Class ;
+             rdfs:subClassOf :Identity_theft .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#fake_items_fraud
+:fake_items_fraud rdf:type owl:Class ;
+                  rdfs:subClassOf :Transaction_fraud ;
+                  owl:disjointWith :fake_payment_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#fake_payment_fraud
+:fake_payment_fraud rdf:type owl:Class ;
+                    rdfs:subClassOf :Transaction_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#human_resource_fraud
+:human_resource_fraud rdf:type owl:Class ;
+                      rdfs:subClassOf :Tax_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#phishing_fraud
+:phishing_fraud rdf:type owl:Class ;
+                rdfs:subClassOf :Identity_theft .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#ponzi_scheme
+:ponzi_scheme rdf:type owl:Class ;
+              rdfs:subClassOf :Investment_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#promissory_note_fraud
+:promissory_note_fraud rdf:type owl:Class ;
+                       rdfs:subClassOf :Investment_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#pyramid_schemes
+:pyramid_schemes rdf:type owl:Class ;
+                 rdfs:subClassOf :Investment_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#real_estate_fraud
+:real_estate_fraud rdf:type owl:Class ;
+                   rdfs:subClassOf :Investment_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#social_media_fraud
+:social_media_fraud rdf:type owl:Class ;
+                    rdfs:subClassOf :Identity_theft .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#tax_evasion_fraud
+:tax_evasion_fraud rdf:type owl:Class ;
+                   rdfs:subClassOf :Tax_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#under_report_fraud
+:under_report_fraud rdf:type owl:Class ;
+                    rdfs:subClassOf :Tax_fraud .
+
+
+###  http://www.semanticweb.org/adamu/ontologies/2022/5/untitled-ontology-4#website_cloning_fraud
+:website_cloning_fraud rdf:type owl:Class ;
+                       rdfs:subClassOf :Identity_theft .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Banking_fraud
+                :Cryptocurrency_fraud
+                :Identity_theft
+                :Investment_fraud
+                :Tax_fraud
+                :Transaction_fraud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Dealer_Fraud
+                :Traditional_Theft
+                :Unscrupulous_Promotors
+                :bitcoin_fraud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :account_statement_fraud
+                :atm_machine_fraud
+                :credit_card_fraud
+                :debit_card_fraud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :email_fraud
+                :phishing_fraud
+                :social_media_fraud
+                :website_cloning_fraud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :human_resource_fraud
+                :tax_evasion_fraud
+                :under_report_fraud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ponzi_scheme
+                :promissory_note_fraud
+                :pyramid_schemes
+                :real_estate_fraud
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
